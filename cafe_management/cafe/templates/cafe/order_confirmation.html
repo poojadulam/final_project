@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Order Confirmation</h1>
+    </header>
+    
+    <section class="order-details">
+        <h2>Thank you for your order, {{ order.user.username }}!</h2>
+        <p>Your order number is {{ order.id }}.</p>
+        <p>Order Details:</p>
+        <ul>
+            {% for item in order.order_items.all %}
+            <li>{{ item.quantity }}x {{ item.product.name }} - ${{ item.subtotal }}</li>
+            {% endfor %}
+        </ul>
+        <p>Total Price: ${{ order.total_price }}</p>
+    </section>
+    
+    <footer>
+        <p>If you have any questions about your order, please contact us at info@ourcafe.com</p>
+    </footer>
+</body>
+</html>

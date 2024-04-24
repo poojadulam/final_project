@@ -1,0 +1,23 @@
+{% extends "cafe/base.html" %}
+
+{% load static %}
+
+{% block title %}
+Menu
+{% endblock title %}
+
+{% block content %}
+<section class="menu">
+    {% for category in categories %}
+    <h2>{{ category.name }}</h2>
+    <p>{{ category.description }}</p>
+    <ul>
+        {% for product in category.products.all %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+        {% endfor %}
+    </ul>
+    {% empty %}
+    <p>No categories found!</p>
+    {% endfor %}
+</section>
+{% endblock content %}

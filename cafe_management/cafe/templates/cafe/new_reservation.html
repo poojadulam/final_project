@@ -1,0 +1,9 @@
+{% extends "cafe/base.html" %}
+{% block content %}
+<h2>Make a New Reservation</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Reservation</button>
+</form>
+{% endblock %}

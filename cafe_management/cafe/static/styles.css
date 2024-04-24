@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    max-width: 100%; /* Ensures the image is never wider than the container */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 300px; /* Limits the image height, adjust as needed */
+}
+
+.hero a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #333;
+    text-decoration: none;
+}
+
+.menu {
+    padding: 20px;
+    text-align: center;
+}
+.menu h2 {
+    color: #333;
+    font-size: 24px;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+.menu ul li {
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+.products {
+    max-width: 600px; /* Adjust the width as necessary */
+    margin: auto;
+    padding: 20px;
+}
+
+.product {
+    margin-bottom: 15px; /* Adds space between product entries */
+    background-color: #f8f8f8; /* A light background for each product */
+    border: 1px solid #e7e7e7; /* A subtle border */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product label {
+    margin-right: 10px; /* Space between the label text and the input */
+}
+
+.product input[type="number"] {
+    width: 60px; /* Fixed width for number inputs */
+    margin-left: 10px; /* Space before the number input */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* A green background for the submit button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Space above the submit button */
+    display: block; /* Center the button by making it a block element */
+    width: fit-content;
+    margin: 20px auto; /* Center the button in the form */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .hero a {
+        width: 100%;
+    }
+}

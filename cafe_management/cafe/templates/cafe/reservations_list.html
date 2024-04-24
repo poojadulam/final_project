@@ -1,0 +1,12 @@
+{% extends "cafe/base.html" %}
+{% block content %}
+<h2>Reservation List</h2>
+<ul>
+    {% for reservation in reservations %}
+    <li>
+        Reservation for {{ reservation.number_of_people }} people at {{ reservation.time }} on {{ reservation.date }}
+        <!-- Add more details as needed -->
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

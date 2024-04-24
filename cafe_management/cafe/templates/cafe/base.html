@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome to Our Cafe{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Cafe</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'place_order' %}">Place Order</a></li>
+                <li><a href="{% url 'new_reservation' %}">Make a Reservation</a></li>
+                <li><a href="{% url 'reservations_list' %}">View Reservations</a></li>
+                <!-- Additional links can be added here -->
+            </ul>
+        </nav>
+    </header>
+    
+    {% block content %}
+    <!-- Content specific to this template -->
+    {% endblock content %}
+    
+    <footer>
+        <p>Contact us at info@ourcafe.com</p>
+    </footer>
+    
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

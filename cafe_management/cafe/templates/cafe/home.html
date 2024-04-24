@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Our Cafe</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Cafe</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'place_order' %}">Place Order</a></li>
+                <li><a href="{% url 'new_reservation' %}">Make a Reservation</a></li>
+                <li><a href="{% url 'reservations_list' %}">View Reservations</a></li>
+                <!-- Add other navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <img src="{% static 'images/logo.jpg' %}" alt="Cafe Image">
+    </section>
+    <footer>
+        <p>Contact us at info@ourcafe.com</p>
+    </footer>
+</body>
+</html>
